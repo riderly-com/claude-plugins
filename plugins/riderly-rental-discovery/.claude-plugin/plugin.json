@@ -1,0 +1,16 @@
+{
+  "name": "riderly-rental-discovery",
+  "displayName": "Riderly Motorbike Rentals",
+  "version": "0.1.0",
+  "description": "Compare motorbike and scooter rentals from local shops and book your ride on Riderly.",
+  "author": {
+    "name": "Riderly",
+    "url": "https://riderly.com/"
+  },
+  "homepage": "https://riderly.com/",
+  "keywords": ["motorbike rental", "scooter rental", "motorcycle rental", "travel", "booking", "riderly"],
+  "icon": "./assets/icon.png",
+  "supportUrl": "https://riderly.com/contact-us/",
+  "privacyPolicyUrl": "https://riderly.com/privacy-policy/",
+  "termsOfServiceUrl": "https://riderly.com/terms-of-service/"
+}

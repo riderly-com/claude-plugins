@@ -1,0 +1,16 @@
+{
+  "name": "riderly",
+  "owner": {
+    "name": "Riderly"
+  },
+  "metadata": {
+    "description": "Official Riderly plugins for Claude."
+  },
+  "plugins": [
+    {
+      "name": "riderly-rental-discovery",
+      "source": "./plugins/riderly-rental-discovery",
+      "category": "travel"
+    }
+  ]
+}
