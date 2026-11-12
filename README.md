@@ -56,7 +56,7 @@ tool inputs, limits, or rules change, update both skills.
 From the public repository:
 
 ```text
-/plugin marketplace add <org>/<public-repo>
+/plugin marketplace add riderly-com/claude-plugins
 /plugin install riderly-rental-discovery@riderly
 ```
 
@@ -89,11 +89,16 @@ git subtree split --prefix ai_integrations/plugin/claude -b claude-plugins-relea
 Submission to Anthropic's official plugin directory is a separate step. Confirm
 the current submission process and requirements at that time.
 
+## License and repository
+
+- Public repository: https://github.com/riderly-com/claude-plugins (set as
+  `repository` in `plugin.json`). Create it before the first mirror push.
+- The plugin is licensed under Apache-2.0 (`license` in `plugin.json`, full text in
+  `plugins/riderly-rental-discovery/LICENSE`). `NOTICE` states that the license covers
+  only the plugin files and that the Riderly name and logo are not licensed.
+
 ## Open items
 
-- Public repository name and organization. Add its URL as `repository` in
-  `plugin.json` once it exists.
-- Whether to add a `license` field to `plugin.json`.
 - Confirm Claude accepts the widget's `_meta.ui.domain` value
   (`https://mcp.riderly.com`). The MCP Apps spec leaves the domain format to
   each host. If Claude rejects it or the widget does not render, emit

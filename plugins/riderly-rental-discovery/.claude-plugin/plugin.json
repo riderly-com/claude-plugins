@@ -8,6 +8,8 @@
     "url": "https://riderly.com/"
   },
   "homepage": "https://riderly.com/",
+  "repository": "https://github.com/riderly-com/claude-plugins",
+  "license": "Apache-2.0",
   "keywords": ["motorbike rental", "scooter rental", "motorcycle rental", "travel", "booking", "riderly"],
   "icon": "./assets/icon.png",
   "supportUrl": "https://riderly.com/contact-us/",
