@@ -29,10 +29,8 @@ details are anonymous and read-only. Users complete booking and payment on Rider
 
 ## Search and explain results
 
-Call `search_motorbike_rentals` with the agreed search values. When the host
-shows the Riderly results widget, let it display the results and keep your
-reply to a short summary. When no widget is shown (for example in a terminal),
-present results as a short list or table with bike name, location, shop rating,
+Call `search_motorbike_rentals` with the agreed search values. Present the
+returned results as a short list or table with bike name, location, shop rating,
 daily price, estimated total with its currency, and the Riderly link.
 
 Use returned data for bike names, locations, shop ratings, prices, and links.

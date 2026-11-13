@@ -39,15 +39,15 @@ The `client=claude` query parameter makes the server record telemetry with
 `utm_medium=claude_plugin`. Listing opens and attributed bookings keep that
 provider. Requests without the parameter are recorded as ChatGPT.
 
-Hosts that support MCP Apps (for example Claude desktop and claude.ai) can show
-the `ui://riderly/rental-results-v4.html` results widget. Claude Code shows text
-results, formatted by the skill.
+Every tool result includes the full results as JSON text, and Claude writes the
+answer itself as a list or table, as the skill describes. The results widget is
+currently turned off for all clients.
 
 ## Keep in sync with the OpenAI plugin
 
 `skills/riderly-rental-discovery/SKILL.md` is a copy of the OpenAI skill in
 `ai_integrations/plugin/riderly-rental-discovery/` with Claude-specific changes
-(text fallback when no widget is shown, no OpenAI API note). It is a plain copy,
+(results always presented as text, no OpenAI API note). It is a plain copy,
 not a symlink, because symlinks break in the mirrored public repository. When
 tool inputs, limits, or rules change, update both skills.
 
@@ -99,10 +99,10 @@ the current submission process and requirements at that time.
 
 ## Open items
 
-- Confirm Claude accepts the widget's `_meta.ui.domain` value
-  (`https://mcp.riderly.com`). The MCP Apps spec leaves the domain format to
-  each host. If Claude rejects it or the widget does not render, emit
-  `ui.domain` for ChatGPT only (`openai/widgetDomain` already covers ChatGPT).
+- The results widget is turned off because it timed out in the Claude app
+  ("This app timed out"). Before turning it back on, check the widget's
+  `_meta.ui.domain` value (`https://mcp.riderly.com`), which the MCP Apps spec
+  leaves to each host, and the `ui/initialize` handshake in Claude.
 - Claude has no per-user request metadata like ChatGPT's `openai/subject`, so
   rate limits fall back to per-IP. Claude Code connects from the user's machine.
   If claude.ai or desktop connections share egress IPs, users may be throttled
